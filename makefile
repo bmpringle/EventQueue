@@ -1,5 +1,5 @@
 test:
-	g++ -std=c++2a EventQueue.cpp test.cpp -o test
+	g++ -std=c++2a test.cpp lib/eventLib.a -o test
 library:
 	mkdir -p obj
 	mkdir -p lib
