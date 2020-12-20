@@ -13,7 +13,7 @@ class EventQueue {
 
         void removeEventListener(std::shared_ptr<Listener> l);
 
-        void callEvent(std::shared_ptr<EventType> e);
+        void callEvent(std::shared_ptr<Event> e);
     private:
         std::vector<std::shared_ptr<Listener>> listenerArray;
 };

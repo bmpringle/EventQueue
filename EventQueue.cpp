@@ -17,7 +17,7 @@ void EventQueue::removeEventListener(std::shared_ptr<Listener> l) {
     }
 }
 
-void EventQueue::callEvent(std::shared_ptr<EventType> e) {
+void EventQueue::callEvent(std::shared_ptr<Event> e) {
     for(std::shared_ptr<Listener> l : listenerArray) {
         l->listenTo(e);
     }

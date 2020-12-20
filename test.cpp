@@ -2,7 +2,7 @@
 #include <iostream>
 
 class ExampleListener : public Listener {
-    void listenTo(std::shared_ptr<EventType> e) {
+    void listenTo(std::shared_ptr<Event> e) {
         if(e->getEventID() == "EXAMPLEEVENT") {
             std::cout << "EXAMPLEEVENT has been handled by ExampleListener" << std::endl;
         }else {
@@ -11,7 +11,7 @@ class ExampleListener : public Listener {
     }
 };
 
-class ExampleEventType : public EventType {
+class ExampleEventType : public Event {
     std::string getEventID() {
         return "EXAMPLEEVENT";
     }
