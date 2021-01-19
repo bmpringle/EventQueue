@@ -12,7 +12,7 @@ void EventQueue::addEventListener(std::shared_ptr<Listener> l) {
 void EventQueue::removeEventListener(std::shared_ptr<Listener> l) {
     for(int i = 0; i < listenerArray.size(); ++i) {
         if(listenerArray.at(i) == l) {
-            listenerArray.erase(listenerArray.begin() + i - 1);
+            listenerArray.erase(listenerArray.begin() + i);
         }
     }
 }
