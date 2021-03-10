@@ -23,5 +23,6 @@ int main() {
     std::shared_ptr<ExampleEventType> exampleEvent (new ExampleEventType());
     queue.addEventListener(listener);
     queue.callEvent(exampleEvent);
+    queue.removeEventListener(listener);
 }
 
